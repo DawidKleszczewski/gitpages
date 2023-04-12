@@ -25,14 +25,7 @@ const App = () => {
         <div>
             <h1>Jesteś głupi(a)?</h1>
             <div className={licznik === 9 ? "niewidac" : "btn1"}>
-                {btn1 && (
-                    <button
-                        onMouseEnter={handleBtn1}
-                        onClick={() => setWynik("Oczywiscie ze nie jestes")}
-                    >
-                        Nie
-                    </button>
-                )}
+                {btn1 && <button onMouseEnter={handleBtn1}>Nie</button>}
             </div>
             <button
                 className={licznik < 9 && styleTak}
@@ -41,14 +34,7 @@ const App = () => {
                 Tak
             </button>
             <div className={style}>
-                {btn2 && (
-                    <button
-                        onMouseEnter={handleBtn2}
-                        onClick={() => setWynik("Oczywiscie ze nie jestes")}
-                    >
-                        Nie
-                    </button>
-                )}
+                {btn2 && <button onMouseEnter={handleBtn2}>Nie</button>}
             </div>
 
             <h1 className="pos">{wynik}</h1>
